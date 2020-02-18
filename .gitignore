@@ -33,7 +33,6 @@ Thumbs.db
 *.sbr
 *.sdf
 obj/
-build/
 cocos2d/
 [Rr]elease/
 [Rr]elease.win32/
