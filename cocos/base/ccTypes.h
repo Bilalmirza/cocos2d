@@ -414,7 +414,11 @@ struct CC_DLL BlendFunc
     static const BlendFunc ADDITIVE;
     /** Enables Linear Dodger blending. Uses {GL_ONE, GL_ONE} */
     static const BlendFunc LINEAR_DODGE;
-
+    /** Enables Multiply blending. Uses {GL_DST_COLOR, GL_ONE_MINUS_SRC_ALPHA} */
+    static const BlendFunc MULTIPLY;
+    /** Enables Screen blending. Uses {GL_ONE, GL_ONE_MINUS_SRC_COLOR} */
+    static const BlendFunc SCREEN;
+    
     bool operator==(const BlendFunc &a) const
     {
         return src == a.src && dst == a.dst;
