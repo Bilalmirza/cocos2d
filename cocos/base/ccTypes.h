@@ -412,6 +412,8 @@ struct CC_DLL BlendFunc
     static const BlendFunc ALPHA_NON_PREMULTIPLIED;
     /** Enables Additive blending. Uses {GL_SRC_ALPHA, GL_ONE} */
     static const BlendFunc ADDITIVE;
+    /** Enables Linear Dodger blending. Uses {GL_ONE, GL_ONE} */
+    static const BlendFunc LINEAR_DODGE;
 
     bool operator==(const BlendFunc &a) const
     {
