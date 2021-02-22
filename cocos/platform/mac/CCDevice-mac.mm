@@ -23,10 +23,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-
-#include "platform/CCPlatformConfig.h"
-#if CC_TARGET_PLATFORM == CC_PLATFORM_MAC
-
 #include "platform/CCDevice.h"
 #include <Foundation/Foundation.h>
 #include <Cocoa/Cocoa.h>
@@ -81,12 +77,6 @@ typedef struct
     int height;
     int width;
     bool hasAlpha;
-    bool         hasStroke;
-    float        strokeColorR;
-    float        strokeColorG;
-    float        strokeColorB;
-    float        strokeColorA;
-    float        strokeSize;
     bool isPremultipliedAlpha;
     unsigned char* data;
 } tImageInfo;
@@ -258,25 +248,22 @@ static bool _initWithString(const char * text, Device::TextAlign align, const ch
         
         // color
         NSColor* foregroundColor;
+        if (fontColor) {
             foregroundColor = [NSColor colorWithDeviceRed:fontColor->r/255.0
                                                     green:fontColor->g/255.0
                                                      blue:fontColor->b/255.0
                                                     alpha:fontAlpha/255.0];
-
+        } else {
+            foregroundColor = [NSColor whiteColor];
+        }
         
         // alignment
         NSTextAlignment textAlign = FontUtils::_calculateTextAlignment(align);
-
         NSMutableParagraphStyle *paragraphStyle = FontUtils::_calculateParagraphStyle(enableWrap, overflow);
         [paragraphStyle setAlignment:textAlign];
         
         // attribute
-        NSString *strokeString = [NSString stringWithFormat:@"-%f", info->strokeSize * 2.5f ];
         NSDictionary* tokenAttributesDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                             foregroundColor,NSForegroundColorAttributeName,
-                                             font, NSFontAttributeName,
-                                             paragraphStyle, NSParagraphStyleAttributeName, strokeString,NSStrokeWidthAttributeName,[NSColor colorWithRed:info->strokeColorR green:info->strokeColorG blue:info->strokeColorB alpha:info->strokeColorA],NSStrokeColorAttributeName, nil];
-        NSDictionary* tokenAttributesDict2 = [NSDictionary dictionaryWithObjectsAndKeys:
                                              foregroundColor,NSForegroundColorAttributeName,
                                              font, NSFontAttributeName,
                                              paragraphStyle, NSParagraphStyleAttributeName, nil];
@@ -287,71 +274,50 @@ static bool _initWithString(const char * text, Device::TextAlign align, const ch
 
         NSSize realDimensions;
         
-        if (overflow == 2) {
+        if (overflow == 2)
             realDimensions = _calculateRealSizeForString(&stringWithAttributes, font, dimensions, enableWrap);
-        } else {
+        else
             realDimensions = _calculateStringSize(stringWithAttributes, font, &dimensions, enableWrap, overflow);
-        }
-        
 
         // Mac crashes if the width or height is 0
         CC_BREAK_IF(realDimensions.width <= 0 || realDimensions.height <= 0);
-        
        
-        if(dimensions.width <= 0.f) {
+        if(dimensions.width <= 0.f)
             dimensions.width = realDimensions.width;
-        }
-        if (dimensions.height <= 0.f) {
+        if (dimensions.height <= 0.f)
             dimensions.height = realDimensions.height;
-        }
-      
         
         //Alignment
         CGFloat xPadding = FontUtils::_calculateTextDrawStartWidth(align, realDimensions, dimensions);
-        
+
         CGFloat yPadding = _calculateTextDrawStartHeight(align, realDimensions, dimensions);
-        
-        NSInteger POTWide = dimensions.width + info->strokeSize * 2.5f;
+
+        NSInteger POTWide = dimensions.width;
         NSInteger POTHigh = dimensions.height;
-        NSRect textRect = NSMakeRect(xPadding+ (info->strokeSize * 2.5f)/2 , POTHigh - dimensions.height + yPadding,
+        NSRect textRect = NSMakeRect(xPadding, POTHigh - dimensions.height + yPadding,
                                      realDimensions.width, realDimensions.height);
-        
-        
+
         NSBitmapImageRep* offscreenRep = [[[NSBitmapImageRep alloc]
-                                           initWithBitmapDataPlanes:NULL
-                                           pixelsWide:POTWide
-                                           pixelsHigh:POTHigh
-                                           bitsPerSample:8
-                                           samplesPerPixel:4
-                                           hasAlpha:YES
-                                           isPlanar:NO
-                                           colorSpaceName:NSDeviceRGBColorSpace
-                                           bitmapFormat: 0
-                                           bytesPerRow:4 * POTWide
-                                           bitsPerPixel:32] autorelease];
-        
+            initWithBitmapDataPlanes:NULL
+            pixelsWide:POTWide
+            pixelsHigh:POTHigh
+            bitsPerSample:8
+            samplesPerPixel:4
+            hasAlpha:YES
+            isPlanar:NO
+            colorSpaceName:NSDeviceRGBColorSpace
+            bitmapFormat: 0
+            bytesPerRow:4 * POTWide
+            bitsPerPixel:32] autorelease];
+
         NSGraphicsContext* g = [NSGraphicsContext graphicsContextWithBitmapImageRep:offscreenRep];
         [NSGraphicsContext saveGraphicsState];
         [NSGraphicsContext setCurrentContext:g];
-        
         [stringWithAttributes drawInRect:textRect];
-        
-        
-        if(info->strokeSize > 0){
-        
-            NSInteger POTHigh2 = dimensions.height;
-            NSRect textRect2 = NSMakeRect(xPadding+ (info->strokeSize * 2.5f)/1.5f, POTHigh2 - dimensions.height + yPadding,
-                                         realDimensions.width, realDimensions.height);
-            stringWithAttributes =[[[NSAttributedString alloc] initWithString:string
-                                                                   attributes:tokenAttributesDict2] autorelease];
-            [stringWithAttributes drawInRect:textRect2];
-        }
         [NSGraphicsContext restoreGraphicsState];
 
-        
-
         auto data = (unsigned char*) [offscreenRep bitmapData];  //Use the same buffer to improve the performance.
-        
+
         NSUInteger textureSize = POTWide * POTHigh * 4;
         auto dataNew = (unsigned char*)malloc(sizeof(unsigned char) * textureSize);
         if (dataNew) {
@@ -375,11 +341,6 @@ Data Device::getTextureDataForText(const char * text, const FontDefinition& text
         tImageInfo info = {0};
         info.width = textDefinition._dimensions.width;
         info.height = textDefinition._dimensions.height;
-        info.strokeSize = textDefinition._stroke._strokeSize;
-        info.strokeColorR = textDefinition._stroke._strokeColor.r/255.0f;
-        info.strokeColorG = textDefinition._stroke._strokeColor.g/255.0f;
-        info.strokeColorB = textDefinition._stroke._strokeColor.b/255.0f;
-        info.strokeColorA = textDefinition._stroke._strokeAlpha/255.0f;
         
         if (! _initWithString(text, align, textDefinition._fontName.c_str(), textDefinition._fontSize, &info, &textDefinition._fontFillColor, textDefinition._fontAlpha, textDefinition._enableWrap, textDefinition._overflow))
         {
@@ -403,5 +364,3 @@ void Device::vibrate(float duration)
 }
 
 NS_CC_END
-
-#endif // CC_TARGET_PLATFORM == CC_PLATFORM_MAC
