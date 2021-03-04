@@ -26,7 +26,7 @@
 #ifndef __COCOS2D_UI_VIDEOWEIGTH_H_
 #define __COCOS2D_UI_VIDEOWEIGTH_H_
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_TIZEN) && !defined(CC_PLATFORM_OS_TVOS)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_OS_TVOS || CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_TIZEN) 
 
 #include "ui/UIWidget.h"
 
@@ -42,7 +42,7 @@ namespace experimental{
         /**
          * @class VideoPlayer
          * @brief Displays a video file.
-         * 
+         *
          * @note VideoPlayer displays a video file base on system widget.
          * It's mean VideoPlayer displays a video file above all graphical elements of cocos2d-x.
          * @js NA
@@ -58,7 +58,19 @@ namespace experimental{
                 PLAYING = 0,
                 PAUSED,
                 STOPPED,
-                COMPLETED
+                COMPLETED,
+                ERROR
+            };
+            
+            /**
+             * Styles of how the the video player is presented
+             * For now only used on iOS to use either MPMovieControlStyleEmbedded (DEFAULT) or
+             * MPMovieControlStyleNone (NONE)
+             */
+            enum class StyleType
+            {
+                DEFAULT = 0,
+                NONE
             };
 
             /**
@@ -95,6 +107,27 @@ namespace experimental{
              * @return A remoting URL address.
              */
             virtual const std::string& getURL() const { return _videoURL;}
+            
+            /**
+             * @brief Set if playback is done in loop mode
+             *
+             * @param looping the video will or not automatically restart at the end
+             */
+            virtual void setLooping(bool looping);
+            
+            /**
+             * Set if the player will enable user input for basic pause and resume of video
+             *
+             * @param enableInput If true, input will be handled for basic functionality (pause/resume)
+             */
+            virtual void setUserInputEnabled(bool enableInput);
+            
+            /**
+             * Set the style of the player
+             *
+             * @param style The corresponding style
+             */
+            virtual void setStyle(StyleType style);
 
             /**
              * Starts playback.
@@ -129,11 +162,27 @@ namespace experimental{
              * @return True if currently playing, false otherwise.
              */
             virtual bool isPlaying() const;
+            
+            /**
+             * Checks whether the VideoPlayer is set with looping mode.
+             *
+             * @return true if the videoplayer is set to loop, false otherwise.
+             */
+            virtual bool isLooping() const;
+
+
+            /**
+             * Checks whether the VideoPlayer is set to listen user input to resume and pause the video
+             *
+             * @return true if the videoplayer user input is set, false otherwise.
+             */
+            virtual bool isUserInputEnabled() const;
+            
 
             /**
              * Causes the video player to keep aspect ratio or no when displaying the video.
              *
-             * @param enable    Specify true to keep aspect ratio or false to scale the video until 
+             * @param enable    Specify true to keep aspect ratio or false to scale the video until
              * both dimensions fit the visible bounds of the view exactly.
              */
             virtual void setKeepAspectRatioEnabled(bool enable);
@@ -145,7 +194,7 @@ namespace experimental{
 
             /**
              * Causes the video player to enter or exit full-screen mode.
-             * 
+             *
              * @param fullscreen    Specify true to enter full-screen mode or false to exit full-screen mode.
              */
             virtual void setFullScreenEnabled(bool fullscreen);
@@ -196,16 +245,20 @@ namespace experimental{
             };
 
             bool _isPlaying;
+            bool _isLooping;
+            bool _isUserInputEnabled;
             bool _fullScreenDirty;
             bool _fullScreenEnabled;
             bool _keepAspectRatioEnabled;
+
+            StyleType _styleType;
 
             std::string _videoURL;
             Source _videoSource;
 
             int _videoPlayerIndex;
             ccVideoPlayerCallback _eventCallback;
-
+    
             void* _videoView;
         };
     }
