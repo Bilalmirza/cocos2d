@@ -1112,7 +1112,6 @@
 		1A570364180BD1120088DEC7 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A570363180BD1120088DEC7 /* libpng.a */; };
 		1A570378180BD1B40088DEC7 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A570377180BD1B40088DEC7 /* libjpeg.a */; };
 		1A57037B180BD1C90088DEC7 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A57037A180BD1C90088DEC7 /* libjpeg.a */; };
-		1A5703A1180BD22C0088DEC7 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5703A0180BD22C0088DEC7 /* libtiff.a */; };
 		1A5703A4180BD2350088DEC7 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5703A3180BD2350088DEC7 /* libtiff.a */; };
 		1A5703B8180BD2780088DEC7 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5703B7180BD2780088DEC7 /* libwebp.a */; };
 		1A5703BB180BD2800088DEC7 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5703BA180BD2800088DEC7 /* libwebp.a */; };
@@ -1135,7 +1134,6 @@
 		1ABA68B11888D700007D1BB4 /* CCFontCharMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABA68AD1888D700007D1BB4 /* CCFontCharMap.h */; };
 		1AC0269C1914068200FA920D /* ConvertUTF.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC026991914068200FA920D /* ConvertUTF.h */; };
 		1AC0269D1914068200FA920D /* ConvertUTF.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC026991914068200FA920D /* ConvertUTF.h */; };
-		29031E0719BFE8D400EFA1DF /* libchipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29031E0619BFE8D400EFA1DF /* libchipmunk.a */; };
 		29031E0919BFE8DE00EFA1DF /* libchipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29031E0819BFE8DE00EFA1DF /* libchipmunk.a */; };
 		291901431B05895600F8B4BA /* CCNinePatchImageParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 291901411B05895600F8B4BA /* CCNinePatchImageParser.h */; };
 		291901441B05895600F8B4BA /* CCNinePatchImageParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 291901411B05895600F8B4BA /* CCNinePatchImageParser.h */; };
@@ -1347,11 +1345,6 @@
 		468A14FB1EF223B700ECA675 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 468A14DF1EF223B600ECA675 /* util.h */; };
 		468A14FC1EF223B700ECA675 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 468A14DF1EF223B600ECA675 /* util.h */; };
 		468A14FD1EF223B700ECA675 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 468A14DF1EF223B600ECA675 /* util.h */; };
-		468A19791EF3BA6500ECA675 /* libBulletCollision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 468A19741EF3BA6500ECA675 /* libBulletCollision.a */; };
-		468A197A1EF3BA6500ECA675 /* libBulletDynamics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 468A19751EF3BA6500ECA675 /* libBulletDynamics.a */; };
-		468A197B1EF3BA6500ECA675 /* libBulletMultiThreaded.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 468A19761EF3BA6500ECA675 /* libBulletMultiThreaded.a */; };
-		468A197C1EF3BA6500ECA675 /* libLinearMath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 468A19771EF3BA6500ECA675 /* libLinearMath.a */; };
-		468A197D1EF3BA6500ECA675 /* libMiniCL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 468A19781EF3BA6500ECA675 /* libMiniCL.a */; };
 		46A170E61807CECA005B8026 /* CCPhysicsBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A1706E1807CE7A005B8026 /* CCPhysicsBody.cpp */; };
 		46A170E71807CECA005B8026 /* CCPhysicsBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 46A1706F1807CE7A005B8026 /* CCPhysicsBody.h */; };
 		46A170E81807CECA005B8026 /* CCPhysicsContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A170701807CE7A005B8026 /* CCPhysicsContact.cpp */; };
@@ -1371,8 +1364,6 @@
 		46A171041807CECB005B8026 /* CCPhysicsShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 46A170761807CE7A005B8026 /* CCPhysicsShape.h */; };
 		46A171051807CECB005B8026 /* CCPhysicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A170771807CE7A005B8026 /* CCPhysicsWorld.cpp */; };
 		46A171061807CECB005B8026 /* CCPhysicsWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = 46A170781807CE7A005B8026 /* CCPhysicsWorld.h */; };
-		46BDE4A81FA32D3400104C05 /* libbox2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BDE4A71FA32D3400104C05 /* libbox2d.a */; };
-		46BDE4AA1FA3316A00104C05 /* libbox2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BDE4A91FA3316A00104C05 /* libbox2d.a */; };
 		46BDE4C21FA86C7F00104C05 /* Array.c in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE4B11FA86C7F00104C05 /* Array.c */; };
 		46BDE4C31FA86C7F00104C05 /* Array.h in Headers */ = {isa = PBXBuildFile; fileRef = 46BDE4B21FA86C7F00104C05 /* Array.h */; };
 		46BDE4C41FA86C7F00104C05 /* ClippingAttachment.c in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE4B31FA86C7F00104C05 /* ClippingAttachment.c */; };
@@ -4746,7 +4737,6 @@
 		1A570363180BD1120088DEC7 /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng.a; sourceTree = "<group>"; };
 		1A570377180BD1B40088DEC7 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		1A57037A180BD1C90088DEC7 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
-		1A5703A0180BD22C0088DEC7 /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
 		1A5703A3180BD2350088DEC7 /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
 		1A5703B7180BD2780088DEC7 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebp.a; sourceTree = "<group>"; };
 		1A5703BA180BD2800088DEC7 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebp.a; sourceTree = "<group>"; };
@@ -4892,7 +4882,6 @@
 		1AD71EED180E27CF00808F54 /* CCPhysicsDebugNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhysicsDebugNode.h; sourceTree = "<group>"; };
 		1AD71EEE180E27CF00808F54 /* CCPhysicsSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCPhysicsSprite.cpp; sourceTree = "<group>"; };
 		1AD71EEF180E27CF00808F54 /* CCPhysicsSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhysicsSprite.h; sourceTree = "<group>"; };
-		29031E0619BFE8D400EFA1DF /* libchipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchipmunk.a; path = prebuilt/mac/libchipmunk.a; sourceTree = "<group>"; };
 		29031E0819BFE8DE00EFA1DF /* libchipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchipmunk.a; path = prebuilt/ios/libchipmunk.a; sourceTree = "<group>"; };
 		2905E9CC1ACD3D8C00092DD2 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = ../external/zlib/prebuilt/mac/libz.a; sourceTree = "<group>"; };
 		2905F9E918CF08D000240AA3 /* CocosGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosGUI.cpp; sourceTree = "<group>"; };
@@ -5073,11 +5062,6 @@
 		468A14DD1EF223B600ECA675 /* idl_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = idl_parser.cpp; sourceTree = "<group>"; };
 		468A14DE1EF223B600ECA675 /* idl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idl.h; sourceTree = "<group>"; };
 		468A14DF1EF223B600ECA675 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
-		468A19741EF3BA6500ECA675 /* libBulletCollision.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBulletCollision.a; path = ../external/bullet/prebuilt/mac/libBulletCollision.a; sourceTree = "<group>"; };
-		468A19751EF3BA6500ECA675 /* libBulletDynamics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBulletDynamics.a; path = ../external/bullet/prebuilt/mac/libBulletDynamics.a; sourceTree = "<group>"; };
-		468A19761EF3BA6500ECA675 /* libBulletMultiThreaded.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBulletMultiThreaded.a; path = ../external/bullet/prebuilt/mac/libBulletMultiThreaded.a; sourceTree = "<group>"; };
-		468A19771EF3BA6500ECA675 /* libLinearMath.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLinearMath.a; path = ../external/bullet/prebuilt/mac/libLinearMath.a; sourceTree = "<group>"; };
-		468A19781EF3BA6500ECA675 /* libMiniCL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiniCL.a; path = ../external/bullet/prebuilt/mac/libMiniCL.a; sourceTree = "<group>"; };
 		46A15FCC1807A544005B8026 /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; name = AUTHORS; path = ../AUTHORS; sourceTree = "<group>"; };
 		46A15FCE1807A544005B8026 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		46A15FE11807A56F005B8026 /* Export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Export.h; sourceTree = "<group>"; };
@@ -5145,8 +5129,6 @@
 		46A170761807CE7A005B8026 /* CCPhysicsShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPhysicsShape.h; sourceTree = "<group>"; };
 		46A170771807CE7A005B8026 /* CCPhysicsWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CCPhysicsWorld.cpp; sourceTree = "<group>"; };
 		46A170781807CE7A005B8026 /* CCPhysicsWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPhysicsWorld.h; sourceTree = "<group>"; };
-		46BDE4A71FA32D3400104C05 /* libbox2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbox2d.a; path = ../external/Box2D/prebuilt/mac/libbox2d.a; sourceTree = "<group>"; };
-		46BDE4A91FA3316A00104C05 /* libbox2d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbox2d.a; path = ../external/Box2D/prebuilt/ios/libbox2d.a; sourceTree = "<group>"; };
 		46BDE4B11FA86C7F00104C05 /* Array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Array.c; sourceTree = "<group>"; };
 		46BDE4B21FA86C7F00104C05 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 		46BDE4B31FA86C7F00104C05 /* ClippingAttachment.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ClippingAttachment.c; sourceTree = "<group>"; };
@@ -6110,12 +6092,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED682BBA213F5FC7001BF6CB /* libuv_a.a in Frameworks */,
-				46BDE4A81FA32D3400104C05 /* libbox2d.a in Frameworks */,
 				46270FA41E1CC6A200AAA098 /* libcrypto.a in Frameworks */,
-				468A197D1EF3BA6500ECA675 /* libMiniCL.a in Frameworks */,
 				46270FA51E1CC6A200AAA098 /* libssl.a in Frameworks */,
-				29031E0719BFE8D400EFA1DF /* libchipmunk.a in Frameworks */,
-				468A197C1EF3BA6500ECA675 /* libLinearMath.a in Frameworks */,
 				15AE1C1A19AAE3C800C27E9E /* libwebsockets.a in Frameworks */,
 				B21770471977ED34009EE11B /* QuartzCore.framework in Frameworks */,
 				B21770451977ED14009EE11B /* Cocoa.framework in Frameworks */,
@@ -6125,11 +6103,7 @@
 				1A570347180BD0850088DEC7 /* libglfw3.a in Frameworks */,
 				1A570361180BD1080088DEC7 /* libpng.a in Frameworks */,
 				1A57037B180BD1C90088DEC7 /* libjpeg.a in Frameworks */,
-				1A5703A1180BD22C0088DEC7 /* libtiff.a in Frameworks */,
 				1A5703B8180BD2780088DEC7 /* libwebp.a in Frameworks */,
-				468A197B1EF3BA6500ECA675 /* libBulletMultiThreaded.a in Frameworks */,
-				468A19791EF3BA6500ECA675 /* libBulletCollision.a in Frameworks */,
-				468A197A1EF3BA6500ECA675 /* libBulletDynamics.a in Frameworks */,
 				1A57052B180BD31F0088DEC7 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6158,7 +6132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED682BC1213F63CB001BF6CB /* libuv_a.a in Frameworks */,
-				46BDE4AA1FA3316A00104C05 /* libbox2d.a in Frameworks */,
 				466F05251EF7659300B80080 /* libBulletCollision.a in Frameworks */,
 				466F05261EF7659300B80080 /* libBulletDynamics.a in Frameworks */,
 				466F05271EF7659300B80080 /* libBulletMultiThreaded.a in Frameworks */,
@@ -6260,8 +6233,6 @@
 				ED682BC2213F6C7A001BF6CB /* libwebsockets.a */,
 				ED682BB9213F5FC6001BF6CB /* libuv_a.a */,
 				ED682BC0213F63CB001BF6CB /* libuv_a.a */,
-				46BDE4A91FA3316A00104C05 /* libbox2d.a */,
-				46BDE4A71FA32D3400104C05 /* libbox2d.a */,
 				466F05201EF7659300B80080 /* libBulletCollision.a */,
 				466F05211EF7659300B80080 /* libBulletDynamics.a */,
 				466F05221EF7659300B80080 /* libBulletMultiThreaded.a */,
@@ -6943,7 +6914,6 @@
 		1A57039F180BD22C0088DEC7 /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				1A5703A0180BD22C0088DEC7 /* libtiff.a */,
 			);
 			name = mac;
 			path = ../external/tiff/prebuilt/mac;
@@ -7466,7 +7436,6 @@
 		29031E0519BFE8C400EFA1DF /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				29031E0619BFE8D400EFA1DF /* libchipmunk.a */,
 			);
 			name = mac;
 			sourceTree = "<group>";
@@ -7746,11 +7715,6 @@
 		468A19731EF3BA3C00ECA675 /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				468A19741EF3BA6500ECA675 /* libBulletCollision.a */,
-				468A19751EF3BA6500ECA675 /* libBulletDynamics.a */,
-				468A19761EF3BA6500ECA675 /* libBulletMultiThreaded.a */,
-				468A19771EF3BA6500ECA675 /* libLinearMath.a */,
-				468A19781EF3BA6500ECA675 /* libMiniCL.a */,
 			);
 			name = mac;
 			sourceTree = "<group>";
