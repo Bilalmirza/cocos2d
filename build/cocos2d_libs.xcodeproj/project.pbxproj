@@ -659,6 +659,9 @@
 		15FB209C1AE7C57D00C31518 /* sweep_context.cc in Sources */ = {isa = PBXBuildFile; fileRef = 15FB20851AE7C57D00C31518 /* sweep_context.cc */; };
 		15FB209D1AE7C57D00C31518 /* sweep_context.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FB20861AE7C57D00C31518 /* sweep_context.h */; };
 		15FB209E1AE7C57D00C31518 /* sweep_context.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FB20861AE7C57D00C31518 /* sweep_context.h */; };
+		17AA0E95272BC97F00817853 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA0E94272BC97F00817853 /* libjpeg.a */; };
+		17AA0E97272BC9B100817853 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA0E96272BC9B100817853 /* libwebp.a */; };
+		17AA0E99272BC9D900817853 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA0E98272BC9D900817853 /* libfreetype.a */; };
 		182C5CAE1A95961600C30D34 /* CSParse3DBinary_generated.h in Headers */ = {isa = PBXBuildFile; fileRef = 182C5CAD1A95961600C30D34 /* CSParse3DBinary_generated.h */; };
 		182C5CB21A95964700C30D34 /* Node3DReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 182C5CB01A95964700C30D34 /* Node3DReader.cpp */; };
 		182C5CB31A95964700C30D34 /* Node3DReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 182C5CB11A95964700C30D34 /* Node3DReader.h */; };
@@ -2369,14 +2372,10 @@
 		507B3D011C31BDD30067B53E /* CCGLProgramStateCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50ABBD6E1925AB4100A911A9 /* CCGLProgramStateCache.cpp */; };
 		507B3D041C31BDD30067B53E /* CCPUOnTimeObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B665E1841AA80A6500DDB1C5 /* CCPUOnTimeObserver.cpp */; };
 		507B3D051C31BDD30067B53E /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF5368180E3374000584C8 /* WebSocket.cpp */; };
-		507B3D071C31BDD30067B53E /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAF5387180E35AC000584C8 /* libwebsockets.a */; };
 		507B3D081C31BDD30067B53E /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 292F1A5C1A5151CE00E479F8 /* libssl.a */; };
 		507B3D091C31BDD30067B53E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1551A342158F2AB200E66CFE /* Foundation.framework */; };
 		507B3D0A1C31BDD30067B53E /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A570363180BD1120088DEC7 /* libpng.a */; };
-		507B3D0B1C31BDD30067B53E /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A570377180BD1B40088DEC7 /* libjpeg.a */; };
 		507B3D0D1C31BDD30067B53E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 292F1A5B1A5151CE00E479F8 /* libcrypto.a */; };
-		507B3D0F1C31BDD30067B53E /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5703BA180BD2800088DEC7 /* libwebp.a */; };
-		507B3D101C31BDD30067B53E /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A57052D180BD3280088DEC7 /* libfreetype.a */; };
 		507B3D141C31BDD30067B53E /* CCUITextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 2980F01D1BA9A5550059E678 /* CCUITextInput.h */; };
 		507B3D161C31BDD30067B53E /* CCPUPathFollower.h in Headers */ = {isa = PBXBuildFile; fileRef = B665E1951AA80A6500DDB1C5 /* CCPUPathFollower.h */; };
 		507B3D171C31BDD30067B53E /* UITextField+CCUITextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 2980F01E1BA9A5550059E678 /* UITextField+CCUITextInput.h */; };
@@ -4529,6 +4528,9 @@
 		15FB20841AE7C57D00C31518 /* sweep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweep.h; sourceTree = "<group>"; };
 		15FB20851AE7C57D00C31518 /* sweep_context.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sweep_context.cc; sourceTree = "<group>"; };
 		15FB20861AE7C57D00C31518 /* sweep_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweep_context.h; sourceTree = "<group>"; };
+		17AA0E94272BC97F00817853 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = ../external/jpeg/prebuilt/tvos/libjpeg.a; sourceTree = "<group>"; };
+		17AA0E96272BC9B100817853 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = ../external/webp/prebuilt/tvos/libwebp.a; sourceTree = "<group>"; };
+		17AA0E98272BC9D900817853 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../external/freetype2/prebuilt/tvos/libfreetype.a; sourceTree = "<group>"; };
 		182C5CAD1A95961600C30D34 /* CSParse3DBinary_generated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSParse3DBinary_generated.h; sourceTree = "<group>"; };
 		182C5CB01A95964700C30D34 /* Node3DReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Node3DReader.cpp; path = Node3DReader/Node3DReader.cpp; sourceTree = "<group>"; };
 		182C5CB11A95964700C30D34 /* Node3DReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node3DReader.h; path = Node3DReader/Node3DReader.h; sourceTree = "<group>"; };
@@ -6096,16 +6098,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AA0E97272BC9B100817853 /* libwebp.a in Frameworks */,
 				ED682BC5213F6CBF001BF6CB /* libuv_a.a in Frameworks */,
+				17AA0E95272BC97F00817853 /* libjpeg.a in Frameworks */,
 				ED682BC3213F6C7A001BF6CB /* libwebsockets.a in Frameworks */,
-				507B3D071C31BDD30067B53E /* libwebsockets.a in Frameworks */,
 				507B3D081C31BDD30067B53E /* libssl.a in Frameworks */,
 				507B3D091C31BDD30067B53E /* Foundation.framework in Frameworks */,
+				17AA0E99272BC9D900817853 /* libfreetype.a in Frameworks */,
 				507B3D0A1C31BDD30067B53E /* libpng.a in Frameworks */,
-				507B3D0B1C31BDD30067B53E /* libjpeg.a in Frameworks */,
 				507B3D0D1C31BDD30067B53E /* libcrypto.a in Frameworks */,
-				507B3D0F1C31BDD30067B53E /* libwebp.a in Frameworks */,
-				507B3D101C31BDD30067B53E /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6204,7 +6205,10 @@
 		1551A341158F2AB200E66CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17AA0E94272BC97F00817853 /* libjpeg.a */,
 				ED682BC4213F6CBE001BF6CB /* libuv_a.a */,
+				17AA0E98272BC9D900817853 /* libfreetype.a */,
+				17AA0E96272BC9B100817853 /* libwebp.a */,
 				ED682BC2213F6C7A001BF6CB /* libwebsockets.a */,
 				ED682BB9213F5FC6001BF6CB /* libuv_a.a */,
 				ED682BC0213F63CB001BF6CB /* libuv_a.a */,
